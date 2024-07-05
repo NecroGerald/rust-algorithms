@@ -15,31 +15,31 @@ pub fn hamming_distance(string1: &str, string2: &str) -> usize {
     distance
 }
 
-#[cfg(test)]
+[cfg(test)]
 mod tests {
     use super::*;
 
-    #[test]
+    [test]
     fn empty_strings() {
         let result = hamming_distance("", "");
         assert_eq!(result, 0);
     }
-    #[test]
+    [test]
     fn distance_zero() {
         let result = hamming_distance("rust", "rust");
         assert_eq!(result, 0);
     }
-    #[test]
+    [test]
     fn distance_three() {
         let result = hamming_distance("karolin", "kathrin");
         assert_eq!(result, 3);
     }
-    #[test]
+    [test]
     fn distance_four() {
         let result = hamming_distance("kathrin", "kerstin");
         assert_eq!(result, 4);
     }
-    #[test]
+    [test]
     fn distance_five() {
         let result = hamming_distance("00000", "11111");
         assert_eq!(result, 5);
